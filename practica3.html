@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica_3</title>
+</head>
+
+<body>
+    <script>
+        // Paso 1: Crear el arreglo de frutas
+        let frutas = ['manzana', 'banana', 'manzana', 'naranja', 'banana', 'manzana', 'pera', 'kiwi'];
+
+        // Paso 2: Crear el objeto para contar las frutas
+        let contador = {};
+
+        // Paso 3: Recorrer el arreglo con un ciclo for
+        for (let i = 0; i < frutas.length; i++) {
+            let fruta = frutas[i];
+
+            // Si la fruta ya está en el contador, incrementamos su cantidad
+            if (contador[fruta]) {
+                contador[fruta]++;
+            } else {
+                // Si no está en el contador, la agregamos con valor 1
+                contador[fruta] = 1;
+            }
+        }
+
+        // Paso 4: Imprimir la cantidad de cada tipo de fruta
+        for (let tipo in contador) {
+           
+            console.log(tipo+": "+contador[tipo]);
+        }
+
+    </script>
+
+
+</body>
+
+</html>
