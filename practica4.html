@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto_funciones</title>
+  </head>
+  <body>
+    <h5>Proyecto funciones en java script</h5>
+    <script>
+        
+      let libros_leidos2 = ["paz mental", "ni todo ni nada"];
+
+      function agregarLibro(libro) {
+        libros_leidos2.push(libro);
+        //console.log(libros_leidos2);
+      } // fin de la función
+
+      function mostrarLibrosLeidos() {
+        console.log("\nLibros leidos: ");
+
+        for (i = 0; i <= libros_leidos2.length - 1; i++) {
+          console.log(libros_leidos2[i]);
+        
+        } // fin de for
+      } // fin de funcion
+
+      agregarLibro(prompt("Agrega un libro: "));
+      agregarLibro(prompt("Agrega otro libro: "));
+      agregarLibro(prompt("Agrega un libro más: "));
+      
+    mostrarLibrosLeidos();
+
+    </script>
+  </body>
+</html>
