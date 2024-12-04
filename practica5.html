@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos y ciclos</title>
+</head>
+
+<body>
+    <h4>Practica 5: Arreglos y ciclos</h4>
+    <script>
+        let libro = {
+            titulo: "El principe",
+            autor: "Pozos",
+            ani: 1999,
+            estado: "prestado",
+            descripcion: function () {
+                console.log(`El libro titulado: "${this.titulo}" del autor ${this.autor} publicado en el año ${this.ani} se encuentra en estado ${this.estado}`)
+            },
+            capitulosLibro: ["primer cap", "segundo cap", "tercer cap"],
+
+            agregar_capitulo: function (capitulo) {
+
+                return this.capitulosLibro.push(capitulo)
+            },//fin de función
+
+            eliminar_cappitulo: function () {
+                this.capitulosLibro.pop()
+            },
+            mostrarLibros: function () {
+                for (let i = 0; i <= this.capitulosLibro.length - 1; i++) {
+                    console.log(this.capitulosLibro[i]);
+
+                }
+            }// fin de segunda función
+
+        }// fin de objeto
+
+        //console.log(libro);
+        libro.descripcion();
+        console.log(libro.capitulosLibro);
+        let x = prompt("introdice un capitulo");
+        libro.agregar_capitulo(x);
+        let y = prompt("introdice otro capitulo");
+        libro.agregar_capitulo(y);
+        let z = prompt("introdice un capitulo más");
+        libro.agregar_capitulo(z);
+        console.log("\nCapitulos actualizdos: ");
+        libro.mostrarLibros();
+
+        libro.eliminar_cappitulo();
+        console.log("\nCapitulos actualizdos: ");
+        libro.mostrarLibros();
+
+    </script>
+
+</body>
+
+</html>
